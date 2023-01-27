@@ -19,7 +19,7 @@ Here's a demo on using the tool. Enjoy! 😊
 
 > `space` to stop printing and `space` again to restart printing.
 
-### Trouble shoot
+### Troubleshoot
 - If you don't have a url for resource
 > This project included some sample files served locally. Go ahead and run `npm start` to start the server on port `1234`. Then use the `print-from-url http://localhost:1234/<sample-file>` to try out the tool.
 
