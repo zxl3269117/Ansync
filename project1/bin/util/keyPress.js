@@ -1,5 +1,4 @@
 (() => {
-  // Step 4: add key event handler
   const readline = require('readline');
   readline.emitKeypressEvents(process.stdin);
   process.stdin.setRawMode(true);
