@@ -1,0 +1,17 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "print resource from a url",
+  "main": "bin/index.js",
+  "bin": {
+    "print-from-url": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ziqian Li",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
