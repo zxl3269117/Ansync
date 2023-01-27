@@ -1,8 +1,9 @@
-(() => {
-  // Step 4: add key event handler
-  const readline = require('readline');
-  readline.emitKeypressEvents(process.stdin);
-  process.stdin.setRawMode(true);
+// (() => {
+const readline = require('readline');
+const addKeyEvents = (interfaceTwo) => {
+  readline.emitKeypressEvents(process.stdin, interfaceTwo);
+
+  if (process.stdin.isTTY) process.stdin.setRawMode(true);
 
   global.printSpeed = 1000;
   global.isStopped = false;
@@ -25,4 +26,7 @@
       }
     }
   })
-})()
+}
+// })()
+
+module.exports = addKeyEvents;
