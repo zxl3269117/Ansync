@@ -12,7 +12,9 @@ class GroceryLoading extends GroceryState {}
 class GroceryLoaded extends GroceryState {
   final List<Grocery> groceries;
 
-  const GroceryLoaded({this.groceries = const <Grocery>[]});
+  const GroceryLoaded({
+    this.groceries = const <Grocery>[],
+  });
 
   @override
   List<Object> get props => [groceries];

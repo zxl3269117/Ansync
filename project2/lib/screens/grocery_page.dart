@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project2/bloc/grocery/grocery_bloc.dart';
 import 'package:project2/models/models.dart';
+import 'package:project2/screens/add_grocery_page.dart';
 
 class GroceryPage extends StatelessWidget {
   const GroceryPage({super.key});
@@ -39,12 +40,8 @@ class GroceryPage extends StatelessWidget {
                       shrinkWrap: true,
                       itemCount: state.groceries.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return _groceryCard(state.groceries[index]);
+                        return _groceryCard(context, state.groceries[index]);
                       },
-                    ),
-                    FloatingActionButton(
-                      child: const Icon(Icons.add),
-                      onPressed: () {},
                     ),
                   ],
                 ),
@@ -55,11 +52,22 @@ class GroceryPage extends StatelessWidget {
           }
         },
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AddGroceryScreen(),
+            ),
+          );
+        },
+      ),
     );
   }
 }
 
-Card _groceryCard(Grocery grocery) {
+Card _groceryCard(BuildContext context, Grocery grocery) {
   return Card(
     margin: const EdgeInsets.all(8.0),
     child: Padding(
@@ -75,8 +83,12 @@ Card _groceryCard(Grocery grocery) {
                 icon: const Icon(Icons.edit_note),
               ),
               IconButton(
-                onPressed: () {},
                 icon: const Icon(Icons.remove_circle_outline),
+                onPressed: () {
+                  context.read<GroceryBloc>().add(
+                        RemoveGrocery(grocery: grocery),
+                      );
+                },
               ),
             ],
           )
