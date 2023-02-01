@@ -22,7 +22,7 @@ class Grocery extends Equatable {
   @override
   List<Object?> get props => [id, description];
 
-  static List<Grocery> items = [
+  static List<Grocery> groceries = [
     const Grocery(id: '1', description: 'Tomato'),
     const Grocery(id: '2', description: 'Apple'),
   ];
