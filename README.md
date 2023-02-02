@@ -33,8 +33,7 @@ Here's a demo on the app. Have fun! 😊
 2. `flutter pub get` to install all dependencies
 3. start the app
   > Make sure you have Xcode or Andriod Studio on your machine.
-  > If you have CocoaPods install, use `flutter run`.
-  > If you don't, use VSCode debugger to run without debugging.
+  > Use `flutter run` or VSCode run without debugging.
 
 ## Contributor
 [Ziqian Li](https://github.com/zxl3269117)
