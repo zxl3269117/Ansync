@@ -28,11 +28,13 @@ Here's a demo on using the tool. Enjoy! 😊
 ### Demo
 Here's a demo on the app. Have fun! 😊
 
+![Demo](https://media.giphy.com/media/FtXLRp36B9cQPtr9qm/giphy.gif)
+
 ### How to use
 1. `cd project2` to go to the project 2 directory
 2. `flutter pub get` to install all dependencies
-3. start the app
-  > Make sure you have Xcode or Andriod Studio on your machine.
+3. Select your device to run the app
+  > Use Xcode or Andriod Studio to simulate on smart phone.
   > Use `flutter run` or VSCode run without debugging.
 
 ## Contributor
