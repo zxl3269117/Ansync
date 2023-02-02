@@ -4,26 +4,33 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '/models/models.dart';
 import 'package:project2/bloc/grocery/grocery_bloc.dart';
 
-class AddGroceryScreen extends StatelessWidget {
-  const AddGroceryScreen({
+class EditGroceryScreen extends StatelessWidget {
+  const EditGroceryScreen({
     super.key,
+    required this.grocery,
   });
+
+  final Grocery grocery;
 
   @override
   Widget build(BuildContext context) {
     TextEditingController controllerId = TextEditingController();
     TextEditingController controllerDescription = TextEditingController();
 
+    // if there is id and
+    controllerId.text = grocery.id;
+    controllerDescription.text = grocery.description;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add a grocery'),
+        title: const Text('Edit'),
       ),
       body: BlocListener<GroceryBloc, GroceryState>(
         listener: (context, state) {
           if (state is GroceryLoaded) {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
-                content: Text('Added!'),
+                content: Text('Editted'),
               ),
             );
           }
@@ -48,13 +55,13 @@ class AddGroceryScreen extends StatelessWidget {
                     );
                     context
                         .read<GroceryBloc>()
-                        .add(AddGrocery(grocery: grocery));
+                        .add(EditGrocery(grocery: grocery));
                     Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Theme.of(context).primaryColor,
                   ),
-                  child: const Text('Add Grocery'),
+                  child: const Text('Edit Grocery'),
                 ),
               ],
             ),

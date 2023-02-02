@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project2/bloc/grocery/grocery_bloc.dart';
 import 'package:project2/models/models.dart';
 import 'package:project2/screens/add_grocery_page.dart';
+import 'edit_grocery_page.dart';
 
 class GroceryPage extends StatelessWidget {
   const GroceryPage({super.key});
@@ -79,8 +80,21 @@ Card _groceryCard(BuildContext context, Grocery grocery) {
           Row(
             children: [
               IconButton(
-                onPressed: () {},
                 icon: const Icon(Icons.edit_note),
+                onPressed: () {
+                  // context.read<GroceryBloc>().add(
+                  //       EditGrocery(
+                  //           grocery: grocery.copyWith(isCompleted: true)),
+                  //     );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => EditGroceryScreen(
+                        grocery: grocery,
+                      ),
+                    ),
+                  );
+                },
               ),
               IconButton(
                 icon: const Icon(Icons.remove_circle_outline),

@@ -22,7 +22,16 @@ class GroceryBloc extends Bloc<GroceryEvent, GroceryState> {
       }
     }
 
-    void onEditGrocery(EditGrocery event, Emitter<GroceryState> emit) {}
+    void onEditGrocery(EditGrocery event, Emitter<GroceryState> emit) {
+      final state = this.state;
+      if (state is GroceryLoaded) {
+        List<Grocery> groceries = state.groceries.map((grocery) {
+          return grocery.id == event.grocery.id ? event.grocery : grocery;
+        }).toList();
+
+        emit(GroceryLoaded(groceries: groceries));
+      }
+    }
 
     void onRemoveGrocery(RemoveGrocery event, Emitter<GroceryState> emit) {
       final state = this.state;
