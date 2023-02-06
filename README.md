@@ -5,7 +5,7 @@ Welcome to the `print-from-url` tool.
 
 ### Demo
 Here's a demo on using the tool. Enjoy! 😊 
-[![Demo](https://asciinema.org/a/QY75JJmqiSAWe5kCGGXzQntXj.svg)](https://asciinema.org/a/QY75JJmqiSAWe5kCGGXzQntXj)
+[![asciicast](https://asciinema.org/a/SvRPEHTmZ101ZVKMSU8Ub07oP.svg)](https://asciinema.org/a/SvRPEHTmZ101ZVKMSU8Ub07oP)
 
 ### How to use
 1. `cd project1` to go to the project 1 directory
@@ -34,8 +34,10 @@ Here's a demo on the app. Have fun! 😊
 1. `cd project2` to go to the project 2 directory
 2. `flutter pub get` to install all dependencies
 3. Select your device to run the app
+  > Ensure you have cocoapod installed.
   > Use Xcode or Andriod Studio to simulate on smart phone.
   > Use `flutter run` or VSCode run without debugging.
+4. Close the app and reopen, everything persists.
 
 ## Contributor
 [Ziqian Li](https://github.com/zxl3269117)
