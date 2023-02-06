@@ -7,12 +7,12 @@ abstract class GroceryEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class LoadGrocery extends GroceryEvent {
-  final List<Grocery> groceries;
-  const LoadGrocery({this.groceries = const <Grocery>[]});
+class InitGrocery extends GroceryEvent {
+  // final List<Grocery> groceries;
+  // const InitGrocery({required this.groceries});
 
-  @override
-  List<Object> get props => [groceries];
+  // @override
+  // List<Object> get props => [groceries];
 }
 
 class AddGrocery extends GroceryEvent {
