@@ -19,6 +19,7 @@
           break;
         case " ":
           global.isStopped = !global.isStopped;
+          break;
         default:
           break;
       }
