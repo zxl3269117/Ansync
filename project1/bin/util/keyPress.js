@@ -1,7 +1,7 @@
 (() => {
   const readline = require('readline');
   readline.emitKeypressEvents(process.stdin);
-  process.stdin.setRawMode(true);
+  if (process.stdin.isTTY) process.stdin.setRawMode(true);
 
   global.printSpeed = 1000;
   global.isStopped = false;
