@@ -5,7 +5,7 @@ Welcome to the `print-from-url` tool.
 
 ### Demo
 Here's a demo on using the tool. Enjoy! 😊 
-[![Demo](https://asciinema.org/a/QY75JJmqiSAWe5kCGGXzQntXj.svg)](https://asciinema.org/a/QY75JJmqiSAWe5kCGGXzQntXj)
+[![asciicast](https://asciinema.org/a/SvRPEHTmZ101ZVKMSU8Ub07oP.svg)](https://asciinema.org/a/SvRPEHTmZ101ZVKMSU8Ub07oP)
 
 ### How to use
 1. `cd project1` to go to the project 1 directory
