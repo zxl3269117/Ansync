@@ -34,8 +34,10 @@ Here's a demo on the app. Have fun! 😊
 1. `cd project2` to go to the project 2 directory
 2. `flutter pub get` to install all dependencies
 3. Select your device to run the app
+  > Ensure you have cocoapod installed.
   > Use Xcode or Andriod Studio to simulate on smart phone.
   > Use `flutter run` or VSCode run without debugging.
+4. Close the app and reopen, everything persists.
 
 ## Contributor
 [Ziqian Li](https://github.com/zxl3269117)
