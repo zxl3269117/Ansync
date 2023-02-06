@@ -7,6 +7,7 @@
     "print-from-url": "bin/index.js"
   },
   "scripts": {
+    "start": "node sampleServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ziqian Li",
